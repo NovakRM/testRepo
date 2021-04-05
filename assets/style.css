@@ -1,0 +1,280 @@
+/* ==GLOBAL STYLES== */
+html, body {
+  margin:0;
+  padding:0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img{
+  object-fit: cover;
+}
+/* ensure all images fit elements and maintain aspect ratios*/
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  background-color: #bd2f2c;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+button:hover{
+  background-color: #6b1c1b;
+}
+
+/* ==HEADER== */
+
+.header{
+  display: inline-flex;
+  justify-content: center;
+  flex-basis: 100%;
+  background-color: rgb(223, 223, 223);
+  padding: 20px;
+}
+
+.logo{
+  width: 20%;
+  height: auto;
+}
+
+/* ==SERVICES== */
+
+.services{
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.serviceDiv{
+  flex-basis: 33%;
+  padding: 20px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.serviceHeader{
+  color: #bd2f2c;
+}
+
+.serviceImg{
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+#serviceImg:hover {opacity: 0.7;}
+
+.about{
+  display: inline-flex;
+  flex-direction: row;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+.leftImg{
+  flex-basis: 40%;
+}
+
+.aboutimg{
+  width: 100%;
+  height: 100%;
+}
+
+.copy{
+  align-self: center;
+  flex-basis: 60%;
+  padding: 20px;
+}
+
+.contact{
+  flex-basis: 100%;
+  padding: 20px;
+  height: 30vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer{
+  flex-basis: 100%;
+  display: inline-flex;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  background-color: rgb(58, 58, 58);
+}
+
+/* == CAROUSEL == */
+
+.carousel{
+  flex-basis: 100%;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  border-top: solid 10px  #bd2f2c;
+}
+
+.slideImg{
+  width: 100%;
+  height: 500px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+/* NTS: Note to client captions optional, just would have to remove element from html + stylesheet on request! */
+.text {
+  background-color:  rgba(0,0,0,0.7);
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* ==MEDIA QUERIES== */
+@media only screen and (max-width: 880px){
+ .logo{
+   width: 40%;
+   height: auto;
+  }
+  .services{
+    display: block;
+  }
+  .serviceDiv{
+    padding: 0px;
+    line-height: auto;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}

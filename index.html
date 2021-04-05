@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img class="logo" src="./assets/images/WRLogo.png">
+            </div>
+            <div class="carousel">
+                <div class="slideshow-container">
+                    <!-- Images trigger both slideshow and lightbox modal. Leave event listener untouched.-->
+                    <div class="mySlides fade">
+                    <img src="./assets/images/AT_TatMidtown-Codaray-5.jpg" class="slideImg" onclick="currentSlide(1)">
+                    <div class="text">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <img src="./assets/images/Broken-egg_160.jpg" class="slideImg" onclick="currentSlide(2)">
+                    <div class="text">Caption Two</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <img src="./assets/images/AT_TatMidtown-Codaray-1.jpg" class="slideImg" onclick="currentSlide(3)">
+                    <div class="text">Caption Three</div>
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+            </div>
+            <div class="services">
+                <div class="serviceDiv">
+                    <img class="serviceImg" src="./assets/images/Broken-egg_160.jpg">
+                    <h2 class="serviceHeader">General Construction</h2>
+                    <p>
+                        eprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi
+                    </p>
+                </div>
+                <div class="serviceDiv">
+                    <img class="serviceImg" src="./assets/images/Broken-egg_060.jpg" onclick="openModal();lightBox(2)">
+                    <h2 class="serviceHeader">Construction Management</h2>
+                    <p>
+                        eprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi
+                    </p>
+                </div>
+                <div class="serviceDiv">
+                    <img class="serviceImg" src="./assets/images/Broken-egg_120.jpg" onclick="openModal();lightBox(3)">
+                    <h2 class="serviceHeader">Design-Build</h2>
+                    <p>
+                        eprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis modi
+                    </p>
+                </div>
+                
+            </div>
+            <div class="about">
+                <div class="leftImg">
+                    <img class="aboutimg" src="./assets/images/Broken-egg_120.jpg" id="img01">
+                </div>
+                <!-- Modal -->
+                <div id="lightbox" class="modal">
+                    <!-- Close Button -->
+                    <span class="close">&times;</span>
+                    <img src="./assets/images/Broken-egg_120.jpg" class="modal-content" id="modalImg">
+                </div>
+                <div class="copy">
+                    <h2>A Bit About Us</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!  
+                    </p>
+                    <button>Projects</button> <button>Our Staff</button>
+                </div>
+            </div>
+            <div class="contact">
+                <h1 class="serviceHeader">Convinced Yet?</h1> 
+                <button>Contact Us</button>
+            </div>
+            <footer>2021 Waggoner Resilience, Inc.</footer>
+            <script src="./assets/js/logic.js"></script>
+        </div>
+    </body>
+</html>
